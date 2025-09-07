@@ -1,0 +1,91 @@
+.watchlist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.watchlist-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.watchlist-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.watchlist-count {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.watchlist-loading,
+.watchlist-error,
+.watchlist-empty {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.watchlist-error h3 {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.watchlist-error p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.watchlist-empty {
+  padding: 4rem 2rem;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.watchlist-empty h2 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.watchlist-empty p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0 0 2rem 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.watchlist-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .watchlist-container {
+    padding: 1rem;
+  }
+  
+  .watchlist-header h1 {
+    font-size: 2rem;
+  }
+  
+  .empty-icon {
+    font-size: 3rem;
+  }
+  
+  .watchlist-empty h2 {
+    font-size: 1.5rem;
+  }
+}

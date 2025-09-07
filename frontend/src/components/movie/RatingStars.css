@@ -1,0 +1,89 @@
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars-container {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s ease, transform 0.2s ease;
+  position: relative;
+  line-height: 1;
+}
+
+.star.full {
+  color: #ffc107;
+}
+
+.star.half {
+  color: #ffc107;
+  position: relative;
+}
+
+.star.half::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #ffc107;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.rating-stars.small .star {
+  font-size: 16px !important;
+}
+
+.rating-stars.medium .star {
+  font-size: 20px !important;
+}
+
+.rating-stars.large .star {
+  font-size: 24px !important;
+}
+
+.rating-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Interactive rating */
+.rating-stars.interactive .star:hover {
+  color: #ffc107;
+}
+
+.rating-stars.interactive .star:hover ~ .star {
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .rating-stars.small .star {
+    font-size: 14px !important;
+  }
+  
+  .rating-stars.medium .star {
+    font-size: 18px !important;
+  }
+  
+  .rating-stars.large .star {
+    font-size: 22px !important;
+  }
+  
+  .rating-text {
+    font-size: 0.8rem;
+  }
+}

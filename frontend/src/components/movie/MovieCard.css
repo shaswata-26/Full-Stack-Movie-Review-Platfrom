@@ -1,0 +1,136 @@
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.movie-card-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.movie-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-card-image img {
+  transform: scale(1.05);
+}
+
+.movie-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.movie-rating {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.rating-text {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.movie-card-content {
+  padding: 1.5rem;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-year {
+  color: #667eea;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.movie-genres {
+  color: #666;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.movie-director {
+  color: #555;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+}
+
+.movie-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.review-count {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .movie-card-image {
+    height: 250px;
+  }
+  
+  .movie-card-content {
+    padding: 1rem;
+  }
+  
+  .movie-title {
+    font-size: 1.1rem;
+  }
+}
